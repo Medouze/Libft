@@ -6,19 +6,23 @@
 /*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:46:02 by mlavergn          #+#    #+#             */
-/*   Updated: 2024/08/02 14:02:35 by mlavergn         ###   ########.fr       */
+/*   Updated: 2024/08/03 15:34:03 by mlavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// void	*ft_memcpy(void *dest, const void *src, size_t n)
-// {
-// 	size_t	i;
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t	i;
 
-// 	i = 0;
-// 	while (i < n)
-// 	{
-// 		ft_memset(dest, src[i], 1);
-// 	}
-// }
+	i = 0;
+	if (!src && !dest)
+		return (NULL);
+	while (i < n)
+	{
+		((unsigned char *)dest)[i] = ((unsigned const char *)src)[i];
+		i++;
+	}
+	return (dest);
+}
