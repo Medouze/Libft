@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/02 13:46:02 by mlavergn          #+#    #+#             */
-/*   Updated: 2024/08/03 15:55:09 by mlavergn         ###   ########.fr       */
+/*   Created: 2024/08/03 15:40:45 by mlavergn          #+#    #+#             */
+/*   Updated: 2024/08/03 16:01:45 by mlavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	i = 0;
-	if (!src && !dest)
-		return (NULL);
-	while (i < n)
+	if (((unsigned char *)dest) < ((unsigned const char *)src))
 	{
+		i = 0;
+		while (i < n)
+		{
+			((unsigned char *)dest)[i] = ((unsigned const char *)src)[i];
+			i++;
+		}
+	}
+	else
+	{
+		i = n - 1;
+		while (i > 0)
+		{
+			((unsigned char *)dest)[i] = ((unsigned const char *)src)[i];
+			i--;
+		}
 		((unsigned char *)dest)[i] = ((unsigned const char *)src)[i];
-		i++;
 	}
 	return (dest);
 }

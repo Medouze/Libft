@@ -6,7 +6,7 @@
 /*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 01:26:56 by mlavergn          #+#    #+#             */
-/*   Updated: 2024/08/02 14:09:51 by mlavergn         ###   ########.fr       */
+/*   Updated: 2024/08/03 15:53:48 by mlavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int		ft_isprint(int c);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t len);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
