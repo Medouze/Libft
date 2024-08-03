@@ -6,13 +6,13 @@
 #    By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/02 01:26:52 by mlavergn          #+#    #+#              #
-#    Updated: 2024/08/03 16:05:13 by mlavergn         ###   ########.fr        #
+#    Updated: 2024/08/03 16:56:02 by mlavergn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	=	ft_substr.c ft_strlen.c ft_strjoin.c ft_strtrim.c ft_bzero.c ft_isalnum.c \
 			ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memset.c ft_split.c \
-			ft_memcpy.c ft_memmove.c ft_strlcpy.c
+			ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c 
 OBJS	= ${SRCS:.c=.o}
 OBJSB	= ${SRCSB:.c=.o}
 NAME	= libft.a
