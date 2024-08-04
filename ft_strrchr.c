@@ -6,7 +6,7 @@
 /*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 17:18:45 by mlavergn          #+#    #+#             */
-/*   Updated: 2024/08/03 17:49:28 by mlavergn         ###   ########.fr       */
+/*   Updated: 2024/08/04 01:35:50 by mlavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	size_s = ft_strlen(s);
 	while (size_s >= 0)
 	{
-		if (s[size_s] == c)
+		if (s[size_s] == (char)(c))
 			return ((char *)s + size_s);
 		size_s--;
 	}

@@ -6,7 +6,7 @@
 /*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 03:29:18 by mlavergn          #+#    #+#             */
-/*   Updated: 2024/08/03 16:47:46 by mlavergn         ###   ########.fr       */
+/*   Updated: 2024/08/04 01:52:57 by mlavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	while (s && s[i])
+	while (s[i])
 		i++;
 	return (i);
 }

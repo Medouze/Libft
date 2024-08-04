@@ -6,7 +6,7 @@
 /*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 01:26:48 by mlavergn          #+#    #+#             */
-/*   Updated: 2024/08/02 03:27:17 by mlavergn         ###   ########.fr       */
+/*   Updated: 2024/08/04 01:42:30 by mlavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
