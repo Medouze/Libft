@@ -6,7 +6,7 @@
 /*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 01:26:56 by mlavergn          #+#    #+#             */
-/*   Updated: 2024/08/04 19:48:55 by mlavergn         ###   ########.fr       */
+/*   Updated: 2024/08/04 20:13:11 by mlavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
-# include <ctype.h>
 
 typedef struct s_list
 {
