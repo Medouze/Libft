@@ -6,7 +6,7 @@
 /*   By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 18:37:16 by mlavergn          #+#    #+#             */
-/*   Updated: 2024/08/04 20:10:58 by mlavergn         ###   ########.fr       */
+/*   Updated: 2024/08/06 01:13:18 by mlavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*tmp;
+	void	*content;
 
 	new = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
 	{
-		tmp = ft_lstnew(f(lst->content));
+		content = f(lst->content);
+		tmp = ft_lstnew(content);
 		if (!tmp)
 		{
+			if (content)
+				del(content);
 			ft_lstclear(&new, del);
 			return (NULL);
 		}

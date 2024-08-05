@@ -6,7 +6,7 @@
 #    By: mlavergn <mlavergn@s19.be>                 +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/02 01:26:52 by mlavergn          #+#    #+#              #
-#    Updated: 2024/08/04 18:37:08 by mlavergn         ###   ########.fr        #
+#    Updated: 2024/08/06 00:01:55 by mlavergn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ all: ${NAME}
 
 bonus: ${NAME} ${OBJSB}
 	${LIBC} ${NAME} ${OBJSB}
+
 clean:
 	${RM} ${OBJS} ${OBJSB}
 
